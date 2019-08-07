@@ -30,6 +30,12 @@ while True:
         cv2.putText(img, "Human", (x+5, y-5),
                     cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
         startSpeech("human")
+       
+    for(x, y, w, h) in cars:
+        cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        cv2.putText(img, "Car", (x+5, y-5),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        startSpeech("Car")
 
 
 
